@@ -1,3 +1,4 @@
+let history = [];
 function beregn() {
     const tal1 = parseFloat(document.getElementById("tal1").value);
     const regnetegn = document.getElementById("regnetegn").value;
@@ -31,4 +32,10 @@ function beregn() {
     }
 
     document.getElementById("resultat").innerHTML = "Resultat: " + resultat;
+
+    history.push(resultat);  
+  for(let e of history) {
+    console.log("Her er resultatet:" + e);
   }
+  } 
+
